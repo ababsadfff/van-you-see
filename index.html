@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>覃茂钦 | Anime Dev Portfolio</title>
+  <meta name="description" content="覃茂钦的二次元风格开发者个人网站，包含可交互物理引擎展示。" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#top">QMQ//LAB</a>
+      <nav>
+        <a href="#about">设定</a>
+        <a href="#engine">Engine</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">联络</a>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换主题">🌙</button>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero panel">
+      <div class="hero-left">
+        <p class="kicker">NEXT GENERATION WEB MAGE</p>
+        <h1>
+          覃茂钦
+          <span>Code with style, ship with physics.</span>
+        </h1>
+        <p class="intro">
+          我是一个偏爱高表现力界面与底层逻辑实现的开发者。这个页面不是静态模板，
+          而是一个可交互的物理实验场，用代码直接证明工程能力。
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#engine">启动引擎</a>
+          <a class="btn ghost" href="#projects">查看作品</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="avatar-frame">
+          <img
+            class="avatar-img"
+            src="file:///C:/Users/29138/.cursor/projects/c-Users-29138-Desktop-cursor/assets/c__Users_29138_AppData_Roaming_Cursor_User_workspaceStorage_30532844835ee3d8c7cf263d8d11d9d1_images_ef9cb50b3ef34098e5a30e816d19996a-4ad56346-1ffa-4578-a5a1-1c5e0dc6d988.png"
+            alt="覃茂钦头像"
+          />
+          <p>我的头像</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="engine" class="panel engine">
+      <div class="panel-head">
+        <h2>Physics Playground</h2>
+        <p>纯 JavaScript 2D 物理：重力、碰撞响应、拖拽控制、实时参数更新。</p>
+      </div>
+
+      <div class="engine-layout">
+        <div class="canvas-wrap">
+          <canvas id="physicsCanvas" width="860" height="420"></canvas>
+          <div class="hint">拖拽任意球体，按住可投掷；参数修改会即时生效。</div>
+        </div>
+
+        <aside class="control-panel">
+          <label>
+            Gravity <span id="gravityValue">0.35</span>
+            <input id="gravityInput" type="range" min="0" max="1" step="0.01" value="0.35" />
+          </label>
+          <label>
+            Bounce <span id="bounceValue">0.82</span>
+            <input id="bounceInput" type="range" min="0.4" max="1" step="0.01" value="0.82" />
+          </label>
+          <label>
+            Bodies <span id="countValue">18</span>
+            <input id="countInput" type="range" min="6" max="40" step="1" value="18" />
+          </label>
+          <button id="resetBodies" class="btn primary wide" type="button">重置场景</button>
+          <pre id="stats" class="stats"></pre>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="panel split">
+      <div>
+        <h2>角色设定</h2>
+        <p>
+          你好，我是覃茂钦，目前正在持续学习前后端开发，喜欢把创意界面和扎实功能结合起来。
+          我憧憬成为一名全栈开发师，能够独立完成从产品想法到上线部署的完整流程。
+        </p>
+      </div>
+      <ul class="chips">
+        <li>Frontend Craft</li>
+        <li>Canvas / Animation</li>
+        <li>Systems Thinking</li>
+        <li>TypeScript & Node</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="panel">
+      <h2>作品档案</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Realtime Dashboard</h3>
+          <p>高频数据可视化系统，优化渲染链路后首屏时间下降 36%。</p>
+        </article>
+        <article class="card">
+          <h3>Interactive Story Site</h3>
+          <p>剧情互动网页，设计了分镜式滚动动画与状态机驱动流程。</p>
+        </article>
+        <article class="card">
+          <h3>Tooling Automation</h3>
+          <p>内部脚本平台，减少重复流程，团队交付效率提升明显。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel split">
+      <div>
+        <h2>联络频道</h2>
+        <p>欢迎聊技术、创意项目和远程合作。</p>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:ababsadfff@gmail.com">ababsadfff@gmail.com</a>
+        <a href="https://github.com/ababsadfff/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://wpa.qq.com/msgrd?v=3&uin=2913823445&site=qq&menu=yes" target="_blank" rel="noreferrer">QQ: 2913823445</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> 覃茂钦 // ALL SIGNALS RESERVED.</div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
